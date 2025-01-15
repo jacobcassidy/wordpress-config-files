@@ -1,5 +1,7 @@
 # WP Dev Config Files
 
+<!-- TODO: Update this README with usage steps and move the steps below to the testing repo -->
+
 This is for Theme development. For Plugin development, there are a few changes which you can find in the `plugin-config-files` branch.
 
 > [!Warning]
