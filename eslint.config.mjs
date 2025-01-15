@@ -7,7 +7,11 @@ export default [
 	// js.configs.all,
 	...wordPress.configs.flat.recommended,
 	{
-		ignores: [ '**/.dev-assets/', '**/build/', '**/*.min.js' ],
+		ignores: [
+			'**/.dev-assets/',
+			'**/build/',
+			'**/*.min.js',
+		],
 	},
 	{
 		languageOptions: {

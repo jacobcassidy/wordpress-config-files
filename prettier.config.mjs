@@ -2,15 +2,15 @@
  * Prettier configuration.
  * @see https://prettier.io/docs/en/configuration.html
  */
-import wpConfig from "@wordpress/prettier-config";
+import wpConfig from '@wordpress/prettier-config';
 
 const config = {
 	...wpConfig,
-	plugins: ["prettier-plugin-multiline-arrays"],
+	plugins: [ 'prettier-plugin-multiline-arrays' ],
 	overrides: [
 		...wpConfig.overrides,
 		{
-			files: "*.json",
+			files: '*.json',
 			options: {
 				multilineArraysWrapThreshold: 0,
 			},

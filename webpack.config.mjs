@@ -13,8 +13,6 @@ import { sync as globSync } from 'glob';
 // Directories.
 const sourceDir = './src/';
 
-console.log( 'sourceDir', sourceDir );
-
 // Entry points.
 const entriesObj = createEntriesObj();
 
