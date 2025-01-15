@@ -3,7 +3,7 @@
 	"editor.formatOnSave": true,
 	"editor.tabSize": 2,
 	"html.format.wrapAttributes": "auto",
-	"html.format.wrapLineLength": 0, // Stops wrapping of attributes to new line
+	"html.format.wrapLineLength": 0,
 	"phpsab.standard": "WordPress",
 	"phpsab.snifferArguments": [
 		"--ignore=build/*"
