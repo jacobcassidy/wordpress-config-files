@@ -1,7 +1,32 @@
 {
+  "name": "wp-dev-config-files",
+  "version": "1.0.0",
+  "description": "Development configuration files optimized for WordPress Block Theme development",
+  "author": "Jacob Cassidy",
+  "homepage": "https://jacobcassidy.com",
   "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jacobcassidy/wp-dev-config-files"
+  },
+  "bugs": {
+    "url": "https://github.com/jacobcassidy/wp-dev-config-files/issues"
+  },
   "devDependencies": {
     "@wordpress/scripts": "^30.8.1",
-    "typescript-eslint": "^8.20.0"
+    "prettier": "npm:wp-prettier@^3.0.3",
+    "typescript-eslint": "^8.20.0",
+"prettier-plugin-multiline-arrays": "^4.0.2"
+  },
+  "scripts": {
+    "start": "wp-scripts start",
+    "build": "wp-scripts build",
+    "format": "wp-scripts format",
+    "lint:css": "wp-scripts lint-style",
+    "lint:js": "wp-scripts lint-js",
+    "lint:md:docs": "wp-scripts lint-md-docs",
+    "lint:pkg-json": "wp-scripts lint-pkg-json",
+    "packages-update": "wp-scripts packages-update"
   }
 }
+
