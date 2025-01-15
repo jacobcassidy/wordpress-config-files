@@ -3,7 +3,7 @@
 This is for Theme development. For Plugin development, there are a few changes which you can find in the `plugin-config-files` branch.
 
 > [!Warning]
-> When adding a npm package, any changes to `@wordpress/eslint-plugin`and`@wordpress/scripts` may be overwritten.
+> When adding a npm package, non-official changes to `@wordpress/eslint-plugin` and `@wordpress/scripts` may be overwritten. This is what the patch files are for.
 
 ## Steps for getting eslint working with ESM in WordPress scripts:
 
@@ -12,10 +12,10 @@ This is for Theme development. For Plugin development, there are a few changes w
 3. Reload VSCode window
 4. Run `npx eslint .` to confirm it's working.
 
-## Steps for creating a new patch:
+## Steps for creating a new patch
 
 1. `npx patch-package @wordpress/eslint-plugin`
 2. Add to package.json scripts: `"postinstall": "patch-package",`
 
 > [!IMPORTANT]
-> If you are installing packages from scratch, the `package.json` file in `@wordpress/eslint-plugin` will not come from the patch so you will need to override it manually the first time.
+> If you are installing packages from scratch, the `package.json` file inside `@wordpress/eslint-plugin` will not come from the patch so you will need to override it manually the first time.
