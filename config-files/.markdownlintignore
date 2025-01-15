@@ -1,0 +1,4 @@
+**/.dev-assets/**
+**/build/**
+**/node_modules/**
+**/vendor/**
