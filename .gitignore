@@ -15,12 +15,6 @@ yarn-debug.log*
 yarn-error.log*
 
 # REMOVE
-/node_modules/*
-
-!/node_modules/@eslint
-!/node_modules/@eslint-community
-!/node_modules/@wordpress
-!/node_modules/eslint*
-!/node_modules/prettier*
-
-/node_modules/**/node_modules
+node_modules/*
+!node_modules/@wordpress
+node_modules/@wordpress/**/node_modules
