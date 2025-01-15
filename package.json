@@ -16,6 +16,8 @@
 		"@wordpress/scripts": "^30.8.1",
 		"copy-webpack-plugin": "^12.0.2",
 		"eslint": "^9.18.0",
+		"eslint-plugin-jest": "^28.11.0",
+		"eslint-plugin-react-hooks": "^5.1.0",
 		"glob": "^11.0.1",
 		"globals": "^15.14.0",
 		"patch-package": "^8.0.0",
@@ -31,6 +33,7 @@
 		"webpack-remove-empty-scripts": "^1.0.4"
 	},
 	"scripts": {
+		"postinstall": "patch-package",
 		"start": "wp-scripts start",
 		"build": "wp-scripts build",
 		"format": "wp-scripts format",
