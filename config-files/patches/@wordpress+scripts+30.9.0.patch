@@ -1,7 +1,6 @@
 diff --git a/node_modules/@wordpress/scripts/.DS_Store b/node_modules/@wordpress/scripts/.DS_Store
 new file mode 100644
-index 0000000..f558e51
-Binary files /dev/null and b/node_modules/@wordpress/scripts/.DS_Store differ
+index 0000000..e69de29
 diff --git a/node_modules/@wordpress/scripts/config/.eslintignore b/node_modules/@wordpress/scripts/config/.eslintignore
 deleted file mode 100644
 index ee68111..0000000
@@ -206,3 +205,15 @@ index 781e548..16747ea 100644
  
 -process.exit( result.status );
 +return result.status;
+diff --git a/node_modules/@wordpress/scripts/scripts/lint-style.js b/node_modules/@wordpress/scripts/scripts/lint-style.js
+index 103ec6d..e4c986b 100644
+--- a/node_modules/@wordpress/scripts/scripts/lint-style.js
++++ b/node_modules/@wordpress/scripts/scripts/lint-style.js
+@@ -28,6 +28,7 @@ const hasLintConfig =
+ 	hasProjectFile( '.stylelintrc.yaml' ) ||
+ 	hasProjectFile( '.stylelintrc.yml' ) ||
+ 	hasProjectFile( 'stylelint.config.js' ) ||
++  hasProjectFile( 'stylelint.config.mjs' ) ||
+ 	hasProjectFile( '.stylelintrc' ) ||
+ 	hasPackageProp( 'stylelint' );
+ 

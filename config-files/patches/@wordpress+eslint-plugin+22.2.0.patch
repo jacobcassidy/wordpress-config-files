@@ -1,7 +1,6 @@
 diff --git a/node_modules/@wordpress/eslint-plugin/.DS_Store b/node_modules/@wordpress/eslint-plugin/.DS_Store
 new file mode 100644
-index 0000000..3b598e6
-Binary files /dev/null and b/node_modules/@wordpress/eslint-plugin/.DS_Store differ
+index 0000000..e69de29
 diff --git a/node_modules/@wordpress/eslint-plugin/configs/flat/custom.js b/node_modules/@wordpress/eslint-plugin/configs/flat/custom.js
 new file mode 100644
 index 0000000..da17112
@@ -8258,7 +8257,7 @@ index 4dadadb..e8fe455 100644
  	},
  } );
 diff --git a/node_modules/@wordpress/eslint-plugin/rules/__tests__/valid-sprintf.js b/node_modules/@wordpress/eslint-plugin/rules/__tests__/valid-sprintf.js
-index 9b2b7de..e3c6a58 100644
+index 8f5b774..f1f6ccb 100644
 --- a/node_modules/@wordpress/eslint-plugin/rules/__tests__/valid-sprintf.js
 +++ b/node_modules/@wordpress/eslint-plugin/rules/__tests__/valid-sprintf.js
 @@ -9,7 +9,7 @@ import { RuleTester } from 'eslint';
