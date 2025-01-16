@@ -8,6 +8,12 @@
 	"phpsab.snifferArguments": [
 		"--ignore=build/*"
 	],
+	"stylelint.reportDescriptionlessDisables": true,
+	"stylelint.reportNeedlessDisables": true,
+	"stylelint.reportInvalidScopeDisables": true,
+	"editor.codeActionsOnSave": {
+		"source.fixAll.stylelint": "explicit"
+	},
 	"[css]": {
 		"editor.insertSpaces": false
 	},
