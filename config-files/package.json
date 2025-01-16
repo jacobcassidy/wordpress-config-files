@@ -1,6 +1,6 @@
 {
 	"name": "wp-dev-config-files",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "Development configuration files optimized for WordPress Block Theme development",
 	"author": "Jacob Cassidy",
 	"homepage": "https://jacobcassidy.com",
@@ -13,7 +13,7 @@
 	},
 	"devDependencies": {
 		"@eslint/js": "^9.18.0",
-		"@wordpress/scripts": "^30.8.1",
+		"@wordpress/scripts": "^30.9.0",
 		"copy-webpack-plugin": "^12.0.2",
 		"eslint": "^9.18.0",
 		"eslint-plugin-jest": "^28.11.0",
