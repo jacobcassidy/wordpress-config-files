@@ -10,6 +10,18 @@ export default {
 		'stylelint-use-nesting', // Enforces nesting when it is possible in CSS
 	],
 	rules: {
+		'@stylistic/declaration-colon-newline-after': null,
+		'@stylistic/function-comma-space-after': 'always-single-line',
+		'@stylistic/function-parentheses-space-inside': 'never-single-line',
+		'@stylistic/indentation': [
+			'tab',
+			{
+				ignore: [
+					'inside-parens',
+				],
+			},
+		],
+		'@stylistic/max-line-length': 120,
 		'at-rule-empty-line-before': [
 			'always',
 			{
@@ -36,6 +48,7 @@ export default {
 				],
 			},
 		],
+		'csstools/use-nesting': 'always',
 		'no-descending-specificity': [
 			true,
 			{
@@ -44,42 +57,14 @@ export default {
 				],
 			},
 		],
-		'rule-empty-line-before': [
-			'always',
-			{
-				except: [
-					'first-nested',
-					'after-single-line-comment',
-				],
-			},
-		],
-		'scss/operator-no-newline-after': null,
-		'selector-class-pattern': [
-			'^[a-z]([a-z0-9-]+)?(__([a-z0-9]+-?)+)?(--([a-z0-9]+-?)+){0,2}$',
-			{
-				message: 'Expected BEM naming convention for class.',
-			},
-		],
-		'@stylistic/declaration-colon-newline-after': null,
-		'@stylistic/function-parentheses-space-inside': 'never-single-line',
-		'@stylistic/indentation': [
-			'tab',
-			{
-				ignore: [
-					'inside-parens',
-				],
-			},
-		],
-		'@stylistic/max-line-length': 120,
-		'csstools/use-nesting': 'always',
 		'plugin/declaration-block-no-ignored-properties': true,
 		'plugin/no-low-performance-animation-properties': [
 			true,
 			{
 				ignoreProperties: [
 					'background-color',
-					'color',
 					'border-color',
+					'color',
 				],
 			},
 		],
@@ -93,6 +78,22 @@ export default {
 			true,
 			{
 				severity: 'warning',
+			},
+		],
+		'rule-empty-line-before': [
+			'always',
+			{
+				except: [
+					'after-single-line-comment',
+					'first-nested',
+				],
+			},
+		],
+		'scss/operator-no-newline-after': null,
+		'selector-class-pattern': [
+			'^[a-z]([a-z0-9-]+)?(__([a-z0-9]+-?)+)?(--([a-z0-9]+-?)+){0,2}$',
+			{
+				message: 'Expected BEM naming convention for class.',
 			},
 		],
 	},
