@@ -6,7 +6,7 @@ These configuration files are for standardizing linting and formatting rules acr
 
 ## Setup Steps
 
-1. Add the `config-files` to your project root directory.
+1. Add the `config-files` to your project's root directory.
 2. Run `npm i` to install the packages and patches
 3. Reload VSCode for the new linting and formatting rules to take effect.
 
