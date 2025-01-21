@@ -4,7 +4,7 @@ These configuration files are for standardizing linting and formatting rules acr
 
 <!-- For Plugin development, there are a few changes which you can find in the `plugin-config-files` branch. -->
 
-## Steps for getting eslint working with ESM in WordPress scripts
+## Setup Steps
 
 1. Add the `config-files` to your project root directory.
 2. Run `npm i` to install the packages and patches
@@ -13,7 +13,7 @@ These configuration files are for standardizing linting and formatting rules acr
 > [!NOTE]
 > When adding a npm package, non-official changes to `@wordpress/eslint-plugin` and `@wordpress/scripts` may be overwritten. This is what the patches are for and they should automatticlly be applied as needed.
 
-## Steps for creating a new patch
+## Steps for creating a new patch (dev notes)
 
 1. If not already installed, run `npm i patch-package --save-dev`.
 2. Run `npx patch-package @wordpress/eslint-plugin` and `npx patch-package @wordpress/scripts`.
