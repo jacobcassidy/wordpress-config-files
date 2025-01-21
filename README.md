@@ -2,10 +2,9 @@
 
 <!-- TODO: Update this README with usage steps and move the steps below to the testing repo -->
 
-This is for Theme development. For Plugin development, there are a few changes which you can find in the `plugin-config-files` branch.
+These configuration files are for standardizing linting and formatting rules across your custom WordPress theme development projects.
 
-> [!NOTE]
-> When adding a npm package, non-official changes to `@wordpress/eslint-plugin` and `@wordpress/scripts` may be overwritten. This is what the patch files are for.
+<!-- For Plugin development, there are a few changes which you can find in the `plugin-config-files` branch. -->
 
 ## Steps for getting eslint working with ESM in WordPress scripts:
 
@@ -13,6 +12,9 @@ This is for Theme development. For Plugin development, there are a few changes w
 2. Replace the `@wordpress/eslint-plugin` package with the one from gutenberg-eslint-v9 (update the package.json version to match the most recent version before committing it)
 3. Reload VSCode window
 4. Run `npx eslint .` to confirm it's working.
+
+> [!NOTE]
+> When adding a npm package, non-official changes to `@wordpress/eslint-plugin` and `@wordpress/scripts` may be overwritten. This is what the patch files are for.
 
 ## Steps for creating a new patch
 
