@@ -7,6 +7,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 <!-- ## [Unreleased] -->
 
+## [1.2.1] - 2025-01-23
+
+## Changed
+
+-   Fixed webpack custom config not running by adding `prettier.config.mjs` and `webpack.config.mjs` to patch for `node_modules/@wordpress/scripts/utils/configs.js`
+
+[text](config-files/patches/@wordpress+scripts+30.9.0.patch)
+
 ## [1.2.0] - 2025-01-23
 
 ### Added
