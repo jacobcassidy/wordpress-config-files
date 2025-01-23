@@ -102,9 +102,9 @@ index 781e548..16747ea 100644
 --- a/node_modules/@wordpress/scripts/scripts/lint-js.js
 +++ b/node_modules/@wordpress/scripts/scripts/lint-js.js
 @@ -20,10 +20,7 @@ const args = getArgsFromCLI();
- 
+
  const defaultFilesArgs = hasFileArgInCLI() ? [] : [ '.' ];
- 
+
 -// See: https://eslint.org/docs/user-guide/configuring#using-configuration-files-1.
 -const hasLintConfig =
 -	hasArgInCLI( '-c' ) ||
@@ -116,7 +116,7 @@ index 781e548..16747ea 100644
 @@ -32,35 +29,69 @@ const hasLintConfig =
  	hasProjectFile( '.eslintrc' ) ||
  	hasPackageProp( 'eslintConfig' );
- 
+
 +if ( hasLegacyLintConfig ) {
 +	// Backward compatibility with eslintrc mode.
 +	// See: https://eslint.org/docs/latest/use/configure/configuration-files-deprecated.
@@ -177,7 +177,7 @@ index 781e548..16747ea 100644
 -	? [ '--no-eslintrc', '--config', fromConfigRoot( '.eslintrc.js' ) ]
 +	? [ '--no-config-lookup', '--config', fromConfigRoot( 'eslint.config.js' ) ]
  	: [];
- 
+
 -// See: https://eslint.org/docs/user-guide/configuring#ignoring-files-and-directories.
 -const hasIgnoredFiles =
 -	hasArgInCLI( '--ignore-path' ) || hasProjectFile( '.eslintignore' );
@@ -202,7 +202,7 @@ index 781e548..16747ea 100644
 +	[ ...defaultConfigArgs, ...args, ...defaultFilesArgs ],
  	{ stdio: 'inherit' }
  );
- 
+
 -process.exit( result.status );
 +return result.status;
 diff --git a/node_modules/@wordpress/scripts/scripts/lint-style.js b/node_modules/@wordpress/scripts/scripts/lint-style.js
@@ -216,4 +216,23 @@ index 103ec6d..e4c986b 100644
 +  hasProjectFile( 'stylelint.config.mjs' ) ||
  	hasProjectFile( '.stylelintrc' ) ||
  	hasPackageProp( 'stylelint' );
- 
+
+diff --git a/node_modules/@wordpress/scripts/utils/config.js b/node_modules/@wordpress/scripts/utils/config.js
+index be6f183..453ad2f 100644
+--- a/node_modules/@wordpress/scripts/utils/config.js
++++ b/node_modules/@wordpress/scripts/utils/config.js
+@@ -86,12 +86,14 @@ const hasPrettierConfig = () =>
+ 	hasProjectFile( '.prettierrc.yaml' ) ||
+ 	hasProjectFile( '.prettierrc.yml' ) ||
+ 	hasProjectFile( 'prettier.config.js' ) ||
++ hasProjectFile( 'prettier.config.mjs' ) ||
+ 	hasProjectFile( '.prettierrc' ) ||
+ 	hasPackageProp( 'prettier' );
+
+ const hasWebpackConfig = () =>
+ 	hasArgInCLI( '--config' ) ||
+ 	hasProjectFile( 'webpack.config.js' ) ||
++ hasProjectFile( 'webpack.config.mjs' ) ||
+ 	hasProjectFile( 'webpack.config.babel.js' );
+
+ // See https://github.com/michael-ciniawsky/postcss-load-config#usage (used by postcss-loader).
