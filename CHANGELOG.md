@@ -7,6 +7,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 <!-- ## [Unreleased] -->
 
+## [1.2.0] - 2025-01-23
+
+### Added
+
+-   Added `ignoreFiles` array to `stylelint.config.mjs`.
+
+### Changed
+
+-   Updated class filename rules and comments in `phpcs.xml`.
+-   Updated README.md content.
+
 ## [1.1.0] - 2025-01-21
 
 ### Added
