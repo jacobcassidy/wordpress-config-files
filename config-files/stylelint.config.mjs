@@ -3,6 +3,7 @@ export default {
 		'@wordpress/stylelint-config/scss-stylistic',
 		'stylelint-config-cssmodules-order',
 	],
+	ignoreFiles: [ '**/*.min.js', '**/*.min.css', 'build/**' ],
 	plugins: [
 		'stylelint-declaration-block-no-ignored-properties', // Prevents the use of ignored properties within declaration blocks.
 		'stylelint-high-performance-animation', // Prevents the use of low performance animation and transition properties.
