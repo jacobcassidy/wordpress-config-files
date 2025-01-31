@@ -8,7 +8,9 @@ import CopyWebpackPlugin from 'copy-webpack-plugin';
 
 // Utilities.
 import path from 'path';
-import { sync as globSync } from 'glob';
+import fastGlob from 'fast-glob';
+
+const globSync = fastGlob.sync;
 
 // Directories.
 const sourceDir = './src/';
@@ -22,11 +24,7 @@ const minFiles = globSync( `${ sourceDir }/**/*.min.js` );
 // Creates entries object automatically from the source files.
 function createEntriesObj() {
 	const sourceFilePaths = globSync( `${ sourceDir }**/*.{js,css,sass,scss}`, {
-		ignore: [
-			'**/modules/*.js',
-			'**/*.min.js',
-			'**/_*.{sass,scss}',
-		],
+		ignore: [ '**/modules/*.js', '**/*.min.js', '**/_*.{sass,scss}' ],
 	} );
 	const entries = {};
 
