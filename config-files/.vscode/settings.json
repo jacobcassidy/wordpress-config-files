@@ -5,9 +5,7 @@
 	"html.format.wrapAttributes": "auto",
 	"html.format.wrapLineLength": 0,
 	"phpsab.standard": "WordPress",
-	"phpsab.snifferArguments": [
-		"--ignore=build/*"
-	],
+	"phpsab.snifferArguments": [ "--ignore=build/*" ],
 	"stylelint.reportDescriptionlessDisables": true,
 	"stylelint.reportNeedlessDisables": true,
 	"stylelint.reportInvalidScopeDisables": true,

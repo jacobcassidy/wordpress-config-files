@@ -4,15 +4,8 @@ import wordPress from '@wordpress/eslint-plugin';
 
 export default [
 	js.configs.recommended,
-	// js.configs.all,
 	...wordPress.configs.flat.recommended,
-	{
-		ignores: [
-			'**/.dev-assets/',
-			'**/build/',
-			'**/*.min.js',
-		],
-	},
+	{ ignores: [ '**/.dev-assets/', '**/build/', '**/*.min.js' ] },
 	{
 		languageOptions: {
 			globals: {
@@ -22,12 +15,7 @@ export default [
 		},
 		rules: {
 			'no-unused-vars': 'warn',
-			'prettier/prettier': [
-				'warn',
-				{
-					printWidth: 120,
-				},
-			],
+			'prettier/prettier': [ 'warn', { printWidth: 120 } ],
 			yoda: [ 'warn', 'never' ],
 		},
 	},
