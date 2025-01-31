@@ -10,13 +10,16 @@
 		"Gruntfuggly.todo-tree", // Todo Tree for TODOs in code
 		"jacobcassidy.cassidy-dark", // VSCode theme
 		"jacobcassidy.css-nesting-syntax-highlighting", // CSS nesting syntax highlighting
+		"Kasik96.latte", // Neon file syntax highlighting
 		"naumovs.color-highlight", // Highlight colors in code
 		"neilbrayfield.php-docblocker", // PHP DocBlocker for PHP DocBlock generation
 		"pflannery.vscode-versionlens", // Version Lens for package.json
 		"redhat.vscode-xml", // XML support for syntax highlighting and more
+		"SanderRonde.phpstan-vscode", // PHPStan for PHP static analysis
 		"streetsidesoftware.code-spell-checker", // Spell checker for code
 		"stylelint.vscode-stylelint", // Stylelint for CSS linting
 		"Thinker.sort-json", // Sort JSON
+		"Tyriar.sort-lines", // Sort lines with custom settings
 		"valeryanm.vscode-phpsab" // PHP Formatter
 	]
 }
