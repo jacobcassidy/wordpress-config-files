@@ -1,17 +1,16 @@
-# Temporary files
-.dev-assets
-
-# Build directory (src/ contains the source code)
+# Build directory
 /build
 
-# dotenv environment variables file
+# Environment variables
 .env
 
 # Logs
 logs
 *.log
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
 
+# Packages
 node_modules
+vendor
+
+# Temporary files
+.dev-assets
