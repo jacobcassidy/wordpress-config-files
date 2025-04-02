@@ -44,6 +44,9 @@ Runs:
 -   `composer install`
 -   `git init`
 
+> [!IMPORTANT]
+> This script uses the npm `@wordpress/scripts`, which doesn't currently support modern configuration files such as `eslint.config.mjs`. The patches temporary fixes the issue so modern file formats can be used.
+
 <!-- ## Setup Steps
 
 1. Add the `config-files` to your project's root directory.

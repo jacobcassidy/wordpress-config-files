@@ -4,6 +4,7 @@
 ROOT_DIR='wp-dev-config-files'
 SCRIPTS_DIR="${ROOT_DIR}/scripts"
 EXTRAS_DIR="${ROOT_DIR}/extras"
+PATCHES_DIR="${ROOT_DIR}/patches"
 
 # Terminal Base Colors
 BLACK='\033[0;30m'
@@ -265,6 +266,17 @@ if $ADD_DOC_README; then
   fi
 fi
 
+if $ADD_PATCH_FILES; then
+  # Add /patches/ files to project
+  printf "${BLUE}Adding patch files...${RESET}\n"
+  # Ensure the .vscode directory exists
+  mkdir -p patches
+  # Copy/Paste file
+  cp ${PATCHES_DIR}/*.patch ./patches/
+  # Print success message
+  printf "${GREEN}Added patch files${RESET}\n"
+fi
+
 if $RUN_COMPOSER_INSTALL; then
   # Install composer dependencies
   printf "\n${BLUE}Running 'composer install'...${RESET}\n"
@@ -284,9 +296,9 @@ fi
 if $INSTALL_GIT_LOCAL_REPO; then
   # Initialize Git
   printf "\n${BLUE}Initialization Git...${RESET}\n"
-  git init
-  # Print success message
-  printf "${GREEN}${BOLD}Git initialization finished${RESET}\n"
+    git init
+    # Print success message
+    printf "${GREEN}${BOLD}Git initialization finished${RESET}\n"
 fi
 
 printf "\n${MAGENTA}${BOLD}wp-dev-config-files installation is all finished!${RESET}\n\n"
