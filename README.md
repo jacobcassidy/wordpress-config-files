@@ -10,10 +10,11 @@ These configuration files are for standardizing linting and formatting rules acr
 2. Customize the script's configuration settings in: _wp-dev-config-files/scripts/settings.sh_
 3. Run the installation script in you project's root directory with the command: **`wp-dev-config-files/scripts/install.sh`**
 4. Delete the _wp-dev-config-files_ directory after successfully running the installation script
-5. Reload VSCode for the new linting and formatting rules to take effect.
+5. Update the `package.json` file details, such as name, description, author, homepage, and repository for your project.
+6. Reload VSCode for the new linting and formatting rules to take effect.
 
 > [!NOTE]
-> If a file already exists, this script will do nothing with that file. If you want to replace the file, you'll need to delete the file you want to replace and rerun this script, or manually copy/paste the parts you want.
+> If a file already exists, this script will do nothing with that file. If you want to replace the file, you'll need to delete the file you want replaced and rerun this script, or manually copy/paste the parts you want.
 
 ## Features
 
@@ -21,29 +22,27 @@ All options can be turn on/off in the `wp-dev-config-files/scripts/settings.sh` 
 
 Adds:
 
-- .editorconfig
-- .gitignore
-- .markdownlint-cli2.jsonc
-- .markdownlint.jsonc
-- .prettierignore
-- CHANGELOG.md
-- composer.json
-- eslint.config.mjs
-- package.json
-- phpcs.xml
-- phpstan.neon
-- prettier.config.mjs
-- README.md
-- stylelint.config.mjs
-- webpack.config.mjs
+-   .editorconfig
+-   .gitignore
+-   .markdownlint-cli2.jsonc
+-   .markdownlint.jsonc
+-   .prettierignore
+-   CHANGELOG.md
+-   composer.json
+-   eslint.config.mjs
+-   package.json
+-   phpcs.xml
+-   phpstan.neon
+-   prettier.config.mjs
+-   README.md
+-   stylelint.config.mjs
+-   webpack.config.mjs
 
 Runs:
 
-- `npm install`
-- `composer install`
-- `git init`
-
-
+-   `npm install`
+-   `composer install`
+-   `git init`
 
 <!-- ## Setup Steps
 
