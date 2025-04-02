@@ -5,7 +5,7 @@
   <!-- See example file: https://github.com/humanmade/coding-standards/blob/master/HM/ruleset.xml -->
 
   <rule ref="WordPress">
-    <!-- Allow normal, non-yoda coditions. -->
+    <!-- Allow normal, non-yoda conditions. -->
     <exclude name="WordPress.PHP.YodaConditions" />
     <!-- Allow short array syntax. -->
     <exclude name="Generic.Arrays.DisallowShortArraySyntax" />

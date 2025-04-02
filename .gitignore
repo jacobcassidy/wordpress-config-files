@@ -6,12 +6,13 @@ build
 .npm
 
 # Environment files
-ddev-wp-setup-script
 .env
+ddev-wp-setup-script
+wp-dev-config-files
 
 # Logs
-logs
 *.log
+logs
 
 # Packages
 node_modules

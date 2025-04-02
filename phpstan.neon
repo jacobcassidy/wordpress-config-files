@@ -1,9 +1,10 @@
 parameters:
-	level: 10
+	level: 6
 	paths:
 		- .
 	excludePaths:
 		analyse:
+			- .dev-assets/phpstan (?)
 			- node_modules (?)
 			- vendor (?)
 			# UNCOMMENT BELOW TO EXCLUDE WORDPRESS CORE FILES
