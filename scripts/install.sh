@@ -297,11 +297,11 @@ if $INSTALL_GIT_LOCAL_REPO; then
   # Initialize Git
   printf "\n${BLUE}Initialization Git...${RESET}\n"
   if [ -d .git ]; then
-    printf "${BLACK}The .git directory already exists. Skipping initialization.${RESET}\n"
+    printf "${BLACK}Git is already initialized for this project. Skipping initialization.${RESET}\n"
   else
     git init
     # Print success message
-    printf "${GREEN}${BOLD}Git initialization finished${RESET}\n"
+    printf "${GREEN}Local Git repository created at: ${BOLD}.git${RESET}\n"
   fi
 fi
 
