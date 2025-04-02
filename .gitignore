@@ -6,9 +6,11 @@ build
 .npm
 
 # Environment files
-.env
 ddev-wp-setup-script
 wp-dev-config-files
+.env
+composer.lock
+package-lock.json
 
 # Logs
 *.log
