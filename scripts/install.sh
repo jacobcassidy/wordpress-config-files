@@ -296,9 +296,13 @@ fi
 if $INSTALL_GIT_LOCAL_REPO; then
   # Initialize Git
   printf "\n${BLUE}Initialization Git...${RESET}\n"
+  if [ -d .git ]; then
+    printf "${BLACK}The .git directory already exists. Skipping initialization.${RESET}\n"
+  else
     git init
     # Print success message
     printf "${GREEN}${BOLD}Git initialization finished${RESET}\n"
+  fi
 fi
 
 printf "\n${MAGENTA}${BOLD}wp-dev-config-files installation is all finished!${RESET}\n\n"
