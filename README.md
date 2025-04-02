@@ -45,7 +45,7 @@ Runs:
 -   `git init`
 
 > [!IMPORTANT]
-> This script uses the npm `@wordpress/scripts`, which doesn't currently support modern configuration files such as `eslint.config.mjs`. The patches temporary fixes the issue so modern file formats can be used.
+> This script uses the node module `@wordpress/scripts`, which doesn't currently support modern configuration file types such as `eslint.config.mjs`. The patches included in this script, which automatically install when the script is run, temporary fixes the issue so modern file formats can be used until `@wordpress/scripts` is updated to do so itself.
 
 <!-- ## Setup Steps
 
