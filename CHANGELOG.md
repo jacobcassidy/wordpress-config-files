@@ -7,15 +7,27 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 <!-- ## [Unreleased] -->
 
-## [1.3.0] - 2025-01-31
+## [1.3.0] - 2025-04-02
 
-## Added
+### Added
 
--   Add `PHPStan` files (see [PHPStan](https://phpstan.org/)).
+-   Add files for [PHPStan](https://phpstan.org/).
+
+### Changed
+
+-   Created a script to run installation of all files from CLI.
+-   Formatted files.
+-   Removed `prettier-plugin-multiline-arrays` from packages.
+-   Replaced `glob` package with `fast-glob`
+-   Restructured file organization to simplify setup.
+-   Updated `.gitignore` rules.
+-   Updated package versions and homepage URL.
+-   Updated README.md with quick start steps.
+-   Updated recommended anchor comment extension.
 
 ## [1.2.1] - 2025-01-23
 
-## Changed
+### Changed
 
 -   Fixed webpack custom config not running by adding `prettier.config.mjs` and `webpack.config.mjs` to patch for `node_modules/@wordpress/scripts/utils/configs.js`
 
