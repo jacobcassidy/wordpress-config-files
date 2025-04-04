@@ -40,7 +40,7 @@ if $ADD_PATCH_FILES; then
   printf "${BLUE}Adding patch files...${RESET}\n"
   # Download files from GitHub
   printf "${WHITE}Downloading patch files from GitHub...${RESET}\n"
-  git clone -b dev git@github.com:jacobcassidy/wp-scripts-patches.git
+  git clone git@github.com:jacobcassidy/wp-scripts-patches.git
   # Ensure the .vscode directory exists
   printf "${WHITE}Creating 'patches' directory...${RESET}\n"
   mkdir -p patches
