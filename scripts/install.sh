@@ -4,7 +4,6 @@
 ROOT_DIR='wp-dev-config-files'
 SCRIPTS_DIR="${ROOT_DIR}/scripts"
 EXTRAS_DIR="${ROOT_DIR}/extras"
-PATCHES_DIR="${ROOT_DIR}/patches"
 
 # Terminal Base Colors
 BLACK='\033[0;30m'
@@ -35,6 +34,25 @@ RESET='\033[0m'
 source ${SCRIPTS_DIR}/settings.sh
 
 printf "\n${GREEN}${BOLD}Adding files...${RESET}\n"
+
+if $ADD_PATCH_FILES; then
+  # Add /patches/ files to project
+  printf "${BLUE}Adding patch files...${RESET}\n"
+  # Download files from GitHub
+  printf "${WHITE}Downloading patch files from GitHub...${RESET}\n"
+  git clone git@github.com:jacobcassidy/wp-scripts-patches.git
+  # Ensure the .vscode directory exists
+  printf "${WHITE}Creating 'patches' directory...${RESET}\n"
+  mkdir -p patches
+  # Copy/Paste file
+  printf "${WHITE}Copying GitHub patches into 'patches' directory...${RESET}\n"
+  cp ${ROOT_DIR}/wp-scripts-patches/patches/*.patch ./patches/
+  # Remove the downloaded repository
+  printf "${WHITE}Deleting downloaded patches repository...${RESET}\n"
+  rm -rf ${ROOT_DIR}/wp-scripts-patches
+  # Print success message
+  printf "${GREEN}Patch files added successfully in the patches directory.${RESET}\n"
+fi
 
 if $ADD_CONFIG_COMPOSER; then
   # Add composer.json file to project
@@ -264,17 +282,6 @@ if $ADD_DOC_README; then
     # Print success message
     printf "${GREEN}Added file: ${BOLD}README.md${RESET}\n"
   fi
-fi
-
-if $ADD_PATCH_FILES; then
-  # Add /patches/ files to project
-  printf "${BLUE}Adding patch files...${RESET}\n"
-  # Ensure the .vscode directory exists
-  mkdir -p patches
-  # Copy/Paste file
-  cp ${PATCHES_DIR}/*.patch ./patches/
-  # Print success message
-  printf "${GREEN}Added patch files${RESET}\n"
 fi
 
 if $RUN_COMPOSER_INSTALL; then
