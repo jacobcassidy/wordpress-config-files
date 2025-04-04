@@ -33,8 +33,6 @@ RESET='\033[0m'
 # Get the script settings
 source ${SCRIPTS_DIR}/settings.sh
 
-printf "\n${GREEN}${BOLD}Adding files...${RESET}\n"
-
 if $ADD_PATCH_FILES; then
   # Add /patches/ files to project
   printf "${BLUE}Adding patch files...${RESET}\n"
