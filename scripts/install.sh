@@ -5,6 +5,10 @@ ROOT_DIR='wp-dev-config-files'
 SCRIPTS_DIR="${ROOT_DIR}/scripts"
 EXTRAS_DIR="${ROOT_DIR}/extras"
 
+# Messages
+FILE_ADDED_MSG="${GREEN}File added!${RESET}\n\n"
+FILE_EXISTS_MSG="${BLACK}The file already exists. Skipping creation.${RESET}\n\n"
+
 # Terminal Base Colors
 BLACK='\033[0;30m'
 RED='\033[0;31m'
@@ -53,19 +57,19 @@ if $ADD_PATCH_FILES; then
     rm -rf wp-scripts-patches
   fi
   # Print success message
-  printf "${GREEN}Patch files added in the patches directory.${RESET}\n\n"
+  printf "${GREEN}Success!${RESET}\n\n"
 fi
 
 if $ADD_CONFIG_COMPOSER; then
   # Add composer.json file to project
   printf "${BLUE}Adding composer.json file...${RESET}\n"
   if [ -f "composer.json" ]; then
-    printf "${BLACK}The composer.json file already exists. Skipping creation.${RESET}\n\n"
+    printf "${FILE_EXISTS_MSG}"
   else
     # Copy/Paste file
     cp ${ROOT_DIR}/composer.json ./
     # Print success message
-    printf "${GREEN}Added file: ${BOLD}composer.json${RESET}\n\n"
+    printf "${FILE_ADDED_MSG}"
   fi
 fi
 
@@ -74,12 +78,12 @@ if $ADD_CONFIG_EDITORCONFIG; then
   # Add .editorconfig file to project
   printf "${BLUE}Adding .editorconfig file...${RESET}\n"
   if [ -f ".editorconfig" ]; then
-    printf "${BLACK}The .editorconfig file already exists. Skipping creation.${RESET}\n\n"
+    printf "${FILE_EXISTS_MSG}"
   else
     # Copy/Paste file
     cp ${ROOT_DIR}/.editorconfig ./
     # Print success message
-    printf "${GREEN}Added file: ${BOLD}.editorconfig${RESET}\n\n"
+    printf "${FILE_ADDED_MSG}"
   fi
 fi
 
@@ -87,12 +91,12 @@ if $ADD_CONFIG_ESLINT; then
   # Add eslint.config.mjs file to project
   printf "${BLUE}Adding eslint.config.mjs file...${RESET}\n"
   if [ -f "eslint.config.mjs" ]; then
-    printf "${BLACK}The eslint.config.mjs file already exists. Skipping creation.${RESET}\n\n"
+    printf "${FILE_EXISTS_MSG}"
   else
     # Copy/Paste file
     cp ${ROOT_DIR}/eslint.config.mjs ./
     # Print success message
-    printf "${GREEN}Added file: ${BOLD}eslint.config.mjs${RESET}\n\n"
+    printf "${FILE_ADDED_MSG}"
   fi
 fi
 
@@ -100,12 +104,12 @@ if $ADD_CONFIG_GITIGNORE; then
   # Add .gitignore file to project
   printf "${BLUE}Adding .gitignore file...${RESET}\n"
   if [ -f ".gitignore" ]; then
-    printf "${BLACK}The .gitignore file already exists. Skipping creation.${RESET}\n\n"
+    printf "${FILE_EXISTS_MSG}"
   else
     # Copy/Paste file
     cp ${ROOT_DIR}/.gitignore ./
     # Print success message
-    printf "${GREEN}Added file: ${BOLD}.gitignore${RESET}\n\n"
+    printf "${FILE_ADDED_MSG}"
   fi
 fi
 
@@ -113,12 +117,12 @@ if $ADD_CONFIG_MARKDOWN_LINT_CLI2; then
   # Add .markdownlint-cli2.jsonc file to project
   printf "${BLUE}Adding .markdownlint-cli2.jsonc file...${RESET}\n"
   if [ -f ".markdownlint-cli2.jsonc" ]; then
-    printf "${BLACK}The .markdownlint-cli2.jsonc file already exists. Skipping creation.${RESET}\n\n"
+    printf "${FILE_EXISTS_MSG}"
   else
     # Copy/Paste file
     cp ${ROOT_DIR}/.markdownlint-cli2.jsonc ./
     # Print success message
-    printf "${GREEN}Added file: ${BOLD}.markdownlint-cli2.jsonc${RESET}\n\n"
+    printf "${FILE_ADDED_MSG}"
   fi
 fi
 
@@ -126,12 +130,12 @@ if $ADD_CONFIG_MARKDOWN_LINT; then
   # Add .markdownlint.jsonc file to project
   printf "${BLUE}Adding .markdownlint.jsonc file...${RESET}\n"
   if [ -f ".markdownlint.jsonc" ]; then
-    printf "${BLACK}The .markdownlint.jsonc file already exists. Skipping creation.${RESET}\n\n"
+    printf "${FILE_EXISTS_MSG}"
   else
     # Copy/Paste file
     cp ${ROOT_DIR}/.markdownlint.jsonc ./
     # Print success message
-    printf "${GREEN}Added file: ${BOLD}.markdownlint.jsonc${RESET}\n\n"
+    printf "${FILE_ADDED_MSG}"
   fi
 fi
 
@@ -139,12 +143,12 @@ if $ADD_CONFIG_PACKAGE; then
   # Add package.json file to project
   printf "${BLUE}Adding package.json file...${RESET}\n"
   if [ -f "package.json" ]; then
-    printf "${BLACK}The package.json file already exists. Skipping creation.${RESET}\n\n"
+    printf "${FILE_EXISTS_MSG}"
   else
     # Copy/Paste file
     cp ${ROOT_DIR}/package.json ./
     # Print success message
-    printf "${GREEN}Added file: ${BOLD}package.json${RESET}\n\n"
+    printf "${FILE_ADDED_MSG}"
   fi
 fi
 
@@ -152,12 +156,12 @@ if $ADD_CONFIG_PHPCS; then
   # Add phpcs.xml file to project
   printf "${BLUE}Adding phpcs.xml file...${RESET}\n"
   if [ -f "phpcs.xml" ]; then
-    printf "${BLACK}The phpcs.xml file already exists. Skipping creation.${RESET}\n\n"
+    printf "${FILE_EXISTS_MSG}"
   else
     # Copy/Paste file
     cp ${ROOT_DIR}/phpcs.xml ./
     # Print success message
-    printf "${GREEN}Added file: ${BOLD}phpcs.xml${RESET}\n\n"
+    printf "${FILE_ADDED_MSG}"
   fi
 fi
 
@@ -165,12 +169,12 @@ if $ADD_CONFIG_PHPSTAN; then
   # Add phpstan.neon file to project
   printf "${BLUE}Adding phpstan.neon file...${RESET}\n"
   if [ -f "phpstan.neon" ]; then
-    printf "${BLACK}The phpstan.neon file already exists. Skipping creation.${RESET}\n\n"
+    printf "${FILE_EXISTS_MSG}"
   else
     # Copy/Paste file
     cp ${ROOT_DIR}/phpstan.neon ./
     # Print success message
-    printf "${GREEN}Added file: ${BOLD}phpstan.neon${RESET}\n\n"
+    printf "${FILE_ADDED_MSG}"
   fi
 fi
 
@@ -178,12 +182,12 @@ if $ADD_CONFIG_PRETTIER; then
   # Add prettier.config.mjs file to project
   printf "${BLUE}Adding prettier.config.mjs file...${RESET}\n"
   if [ -f "prettier.config.mjs" ]; then
-    printf "${BLACK}The prettier.config.mjs file already exists. Skipping creation.${RESET}\n\n"
+    printf "${FILE_EXISTS_MSG}"
   else
     # Copy/Paste file
     cp ${ROOT_DIR}/prettier.config.mjs ./
     # Print success message
-    printf "${GREEN}Added file: ${BOLD}prettier.config.mjs${RESET}\n\n"
+    printf "${FILE_ADDED_MSG}"
   fi
 fi
 
@@ -191,12 +195,12 @@ if $ADD_CONFIG_PRETTIER_IGNORE; then
   # Add .prettierignore file to project
   printf "${BLUE}Adding .prettierignore file...${RESET}\n"
   if [ -f ".prettierignore" ]; then
-    printf "${BLACK}The .prettierignore file already exists. Skipping creation.${RESET}\n\n"
+    printf "${FILE_EXISTS_MSG}"
   else
     # Copy/Paste file
     cp ${ROOT_DIR}/.prettierignore ./
     # Print success message
-    printf "${GREEN}Added file: ${BOLD}.prettierignore${RESET}\n\n"
+    printf "${FILE_ADDED_MSG}"
   fi
 fi
 
@@ -204,12 +208,12 @@ if $ADD_CONFIG_STYLELINT; then
   # Add stylelint.config.mjs file to project
   printf "${BLUE}Adding stylelint.config.mjs file...${RESET}\n"
   if [ -f "stylelint.config.mjs" ]; then
-    printf "${BLACK}The stylelint.config.mjs file already exists. Skipping creation.${RESET}\n\n"
+    printf "${FILE_EXISTS_MSG}"
   else
     # Copy/Paste file
     cp ${ROOT_DIR}/stylelint.config.mjs ./
     # Print success message
-    printf "${GREEN}Added file: ${BOLD}stylelint.config.mjs${RESET}\n\n"
+    printf "${FILE_ADDED_MSG}"
   fi
 fi
 
@@ -221,12 +225,12 @@ if $ADD_CONFIG_VSCODE_RECOMMENDATIONS; then
   mkdir -p .vscode
 
   if [ -f ".vscode/extensions.json" ]; then
-    printf "${BLACK}The .vscode/extensions.json file already exists. Skipping creation.${RESET}\n\n"
+    printf "${FILE_EXISTS_MSG}"
   else
     # Copy/Paste file
     cp ${ROOT_DIR}/.vscode/extensions.json ./.vscode/
     # Print success message
-    printf "${GREEN}Added file: ${BOLD}.vscode/extensions.json${RESET}\n\n"
+    printf "${FILE_ADDED_MSG}"
   fi
 fi
 
@@ -238,12 +242,12 @@ if $ADD_CONFIG_VSCODE_SETTINGS; then
   mkdir -p .vscode
 
   if [ -f ".vscode/settings.json" ]; then
-    printf "${BLACK}The .vscode/settings.json file already exists. Skipping creation.${RESET}\n\n"
+    printf "${FILE_EXISTS_MSG}"
   else
     # Copy/Paste file
     cp ${ROOT_DIR}/.vscode/settings.json ./.vscode/
     # Print success message
-    printf "${GREEN}Added file: ${BOLD}.vscode/settings.json${RESET}\n\n"
+    printf "${FILE_ADDED_MSG}"
   fi
 fi
 
@@ -251,12 +255,12 @@ if $ADD_CONFIG_WEBPACK; then
   # Add webpack.config.mjs file to project
   printf "${BLUE}Adding webpack.config.mjs file...${RESET}\n"
   if [ -f "webpack.config.mjs" ]; then
-    printf "${BLACK}The webpack.config.mjs file already exists. Skipping creation.${RESET}\n\n"
+    printf "${FILE_EXISTS_MSG}"
   else
     # Copy/Paste file
     cp ${ROOT_DIR}/webpack.config.mjs ./
     # Print success message
-    printf "${GREEN}Added file: ${BOLD}webpack.config.mjs${RESET}\n\n"
+    printf "${FILE_ADDED_MSG}"
   fi
 fi
 
@@ -264,12 +268,12 @@ if $ADD_DOC_CHANGELOG; then
   # Add CHANGELOG.md file to project
   printf "${BLUE}Adding CHANGELOG.md file...${RESET}\n"
   if [ -f "CHANGELOG.md" ]; then
-    printf "${BLACK}The CHANGELOG.md file already exists. Skipping creation.${RESET}\n\n"
+    printf "${FILE_EXISTS_MSG}"
   else
     # Copy/Paste file
     cp ${EXTRAS_DIR}/CHANGELOG.md ./
     # Print success message
-    printf "${GREEN}Added file: ${BOLD}CHANGELOG.md${RESET}\n\n"
+    printf "${FILE_ADDED_MSG}"
   fi
 fi
 
@@ -277,12 +281,12 @@ if $ADD_DOC_README; then
   # Add README.md file to project
   printf "${BLUE}Adding README.md file...${RESET}\n"
   if [ -f "README.md" ]; then
-    printf "${BLACK}The README.md file already exists. Skipping creation.${RESET}\n\n"
+    printf "${FILE_EXISTS_MSG}"
   else
     # Copy/Paste file
     cp ${EXTRAS_DIR}/README.md ./
     # Print success message
-    printf "${GREEN}Added file: ${BOLD}README.md${RESET}\n\n"
+    printf "${FILE_ADDED_MSG}"
   fi
 fi
 
