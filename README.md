@@ -45,7 +45,14 @@ Runs:
 -   `git init`
 
 > [!IMPORTANT]
-> This script uses the node module `@wordpress/scripts`, which doesn't currently support modern configuration file types such as `eslint.config.mjs`. The patches included in this script, which automatically install when the script is run, temporary fixes the issue so modern file formats can be used until `@wordpress/scripts` is updated to do so itself.
+> This script does not install any packages, only the configuration files the packages use. You will need to have the packages, e.g., Node, NPM, NPX, Git, Markdownlint, Prettier, Composer, ESLint, PHPCS, PHPStan, and Stylelint, installed before these configuration files can be used.
+
+> [!NOTE]
+> This script uses the node module `@wordpress/scripts`, which doesn't currently support modern configuration file types such as `eslint.config.mjs`. The patches included in this script, which automatically install from [wp-scripts-patches](https://github.com/jacobcassidy/wp-scripts-patches) when the script is run, temporary fixes the issue so modern file formats can be used until `@wordpress/scripts` is updated to do so itself.
+
+## Found an Issue?
+
+If you come across any issues, please report them [here](https://github.com/jacobcassidy/wp-dev-config-files/issues).
 
 <!-- ## Setup Steps
 
