@@ -5,10 +5,6 @@ ROOT_DIR='wp-dev-config-files'
 SCRIPTS_DIR="${ROOT_DIR}/scripts"
 EXTRAS_DIR="${ROOT_DIR}/extras"
 
-# Messages
-FILE_ADDED_MSG="${GREEN}File added!${RESET}\n\n"
-FILE_EXISTS_MSG="${BLACK}The file already exists. Skipping creation.${RESET}\n\n"
-
 # Terminal Base Colors
 BLACK='\033[0;30m'
 RED='\033[0;31m'
@@ -33,6 +29,10 @@ BRIGHT_WHITE='\033[1;37m'
 ITALIC='\033[3m'
 BOLD='\033[1m'
 RESET='\033[0m'
+
+# Messages
+FILE_ADDED_MSG="${GREEN}File added!${RESET}\n\n"
+FILE_EXISTS_MSG="${BLACK}The file already exists. Skipping creation.${RESET}\n\n"
 
 # Get the script settings
 source ${SCRIPTS_DIR}/settings.sh
