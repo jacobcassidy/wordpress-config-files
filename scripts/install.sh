@@ -49,7 +49,7 @@ if $ADD_PATCH_FILES; then
   cp wp-scripts-patches/patches/*.patch ./patches/
   # Remove the downloaded repository
   printf "${WHITE}Deleting downloaded patches repository...${RESET}\n"
-  rm -rf ${ROOT_DIR}/wp-scripts-patches
+  rm -rf wp-scripts-patches
   # Print success message
   printf "${GREEN}Patch files added successfully in the patches directory.${RESET}\n"
 fi
