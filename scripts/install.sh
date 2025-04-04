@@ -47,11 +47,15 @@ if $ADD_PATCH_FILES; then
   # Copy/Paste file
   printf "${WHITE}Copying GitHub patches into 'patches' directory...${RESET}\n"
   cp wp-scripts-patches/patches/*.patch ./patches/
-  # Remove the downloaded repository
-  printf "${WHITE}Deleting downloaded patches repository...${RESET}\n"
-  rm -rf wp-scripts-patches
   # Print success message
   printf "${GREEN}Patch files added in the patches directory.${RESET}\n"
+  if $REMOVE_CLONED_WP_SCRIPTS_PATCHES; then
+    # Remove the downloaded repository
+    printf "${BLUE}Removing cloned wp-scripts-patches repo...${RESET}\n"
+    rm -rf wp-scripts-patches
+    # Print success message
+    printf "${GREEN}Removed: /wp-scripts-patches/${RESET}\n"
+  fi
 fi
 
 if $ADD_CONFIG_COMPOSER; then

@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Clean up after installation
+REMOVE_CLONED_WP_SCRIPTS_PATCHES=true
+
 # Initialization
 INSTALL_GIT_LOCAL_REPO=true
 
