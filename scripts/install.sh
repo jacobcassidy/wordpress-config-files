@@ -51,7 +51,7 @@ if $ADD_PATCH_FILES; then
   printf "${WHITE}Deleting downloaded patches repository...${RESET}\n"
   rm -rf wp-scripts-patches
   # Print success message
-  printf "${GREEN}Patch files added successfully in the patches directory.${RESET}\n"
+  printf "${GREEN}Patch files added in the patches directory.${RESET}\n"
 fi
 
 if $ADD_CONFIG_COMPOSER; then
