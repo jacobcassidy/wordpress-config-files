@@ -46,7 +46,7 @@ if $ADD_PATCH_FILES; then
   mkdir -p patches
   # Copy/Paste file
   printf "${WHITE}Copying GitHub patches into 'patches' directory...${RESET}\n"
-  cp ${ROOT_DIR}/wp-scripts-patches/patches/*.patch ./patches/
+  cp wp-scripts-patches/patches/*.patch ./patches/
   # Remove the downloaded repository
   printf "${WHITE}Deleting downloaded patches repository...${RESET}\n"
   rm -rf ${ROOT_DIR}/wp-scripts-patches
