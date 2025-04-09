@@ -7,6 +7,7 @@ parameters:
 			- .dev-assets/phpstan (?)
 			- node_modules (?)
 			- vendor (?)
+			- /wp-content/db.php # DDEV symbolic link file
 			# UNCOMMENT BELOW TO EXCLUDE WORDPRESS CORE FILES
 			# - wp-*
 			# - index.php
