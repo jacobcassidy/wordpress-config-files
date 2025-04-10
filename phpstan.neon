@@ -1,14 +1,22 @@
+# If using in the root WP directory, use the following configuration
 parameters:
 	level: 6
 	paths:
-		- .
+		- .dev-assets
+		- wp-content/mu-plugins
+		- wp-content/plugins
+		- wp-content/themes
 	excludePaths:
 		analyse:
 			- .dev-assets/phpstan (?)
-			- node_modules (?)
-			- vendor (?)
-			- wp-content/db.php (?) # DDEV symbolic link file
-			# UNCOMMENT BELOW TO EXCLUDE WORDPRESS CORE FILES
-			# - wp-*
-			# - index.php
-			# - xmlrpc.php
+
+# If using in a plugin or theme directory, use the following configuration
+# parameters:
+# 	level: 6
+# 	paths:
+# 		- .
+# 	excludePaths:
+# 		analyse:
+# 			- .dev-assets/phpstan (?)
+# 			- node_modules (?)
+# 			- vendor (?)
