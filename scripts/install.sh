@@ -43,13 +43,13 @@ if $ADD_PATCH_FILES; then
   # Add /patches/ files to project
   printf "${BLUE}Adding patch files...${RESET}\n"
   # Download files from GitHub
-  printf "${WHITE}Downloading patch files from GitHub...${RESET}\n"
+  printf "${WHITE}Downloading patch files from https://github.com/jacobcassidy/wp-scripts-patches...${RESET}\n"
   git clone git@github.com:jacobcassidy/wp-scripts-patches.git
   # Ensure the .vscode directory exists
   printf "${WHITE}Creating 'patches' directory...${RESET}\n"
   mkdir -p patches
   # Copy/Paste file
-  printf "${WHITE}Copying GitHub patches into 'patches' directory...${RESET}\n"
+  printf "${WHITE}Copying cloned patches into 'patches' directory...${RESET}\n"
   cp wp-scripts-patches/patches/*.patch ./patches/
   if $REMOVE_CLONED_WP_SCRIPTS_PATCHES; then
     # Remove the downloaded repository
