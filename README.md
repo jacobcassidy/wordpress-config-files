@@ -1,5 +1,8 @@
 # WP Dev Config Files
 
+> [!NOTE]
+> This repo has been archived since it's been superseded by the [CassidyDC Development Toolset repo](https://github.com/CassidyDC/development-toolset).
+
 These configuration files are for standardizing linting and formatting rules across your WordPress theme development projects.
 
 <!-- For Plugin development, there are a few changes which you can find in the `plugin-config-files` branch. -->
